@@ -33,7 +33,6 @@ RUN mkdir -p /home/app/store
 # opt-in: override CMD with `-addr 0.0.0.0:8765 -allow-remote` and set
 # WHATSAPP_MCP_TOKEN — see README.md.
 EXPOSE 8765
-VOLUME ["/home/app/store"]
 
 HEALTHCHECK --interval=30s --timeout=5s --start-period=30s --retries=3 CMD ["whatsapp-mcp", "healthcheck"]
 
